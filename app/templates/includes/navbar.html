@@ -1,0 +1,33 @@
+{% load static %}
+<!--Barra de navegación-->
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="{% url "indice" %}">
+                <img src="{% static 'img/logo.jpg' %}" width="50" alt="logo">
+            </a>
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url "indice" %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nuestra-historia">Nuestra historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nuestro-equipo">Nuestro Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <section id="preguntas-frecuentes" class="h-75 container-sm mx-auto">
+                        <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "contact_form" %}">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
