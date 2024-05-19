@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
 
-from app.views import index, contact_view, contact_view_exito
+from app.views import index, contacto_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='indice'),
-    path('contact_form/', contact_view, name='contact_form'),
-    path('contacto_success/', contact_view_exito, name='contacto_exitoso'),
+    path('contacto/', contacto_view, name='contacto'),
+    path('success/', TemplateView.as_view(template_name='success.html'), name='success'),
 ]
